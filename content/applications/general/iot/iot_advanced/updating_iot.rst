@@ -39,8 +39,8 @@ Image and core code update
 
       #. `Download balenaEtcher. <https://etcher.balena.io/#download-etcher>`_
       #. Insert the IoT box's micro SD card into the computer or adapter.
-      #. Open balenaEtcher, click :guilabel:`Flash from URL`, and enter the following URL:
-         `http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`.
+      #. | Open balenaEtcher, click :guilabel:`Flash from URL`, and enter the following URL:
+         | `http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`.
       #. Click :guilabel:`Select target` and select the SD card.
       #. Click :guilabel:`Flash` and wait for the process to finish.
 
@@ -87,3 +87,9 @@ are not functioning properly with the IoT system, proceed as follows:
    A handler update is also performed automatically every time the IoT system is restarted unless
    the :guilabel:`Automatic drivers update` option is disabled in the :guilabel:`Technical
    information` tab in the :ref:`IoT system's form <iot/connect/IoT-form>` in Odoo.
+
+xxx
+Restart Odoo: restart Odoo software on your IoT Box. Usually done when an update is needed or a bug
+is encountered. Generate Password: this is for support mainly. It will generate a new password which
+will be used on the iot box. This password is needed to connect to it remotely / acquire some
+additional right to modify files on the iot box
