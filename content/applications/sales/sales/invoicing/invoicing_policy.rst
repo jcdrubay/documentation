@@ -19,10 +19,10 @@ Invoicing policy features
 To activate the necessary invoicing policy features, go to :menuselection:`Sales app -->
 Configuration --> Settings`, and under the :guilabel:`Invoicing` heading, select an
 :guilabel:`Invoicing Policy` rule: :guilabel:`Invoice what is ordered` or :guilabel:`Invoice what is
-delivered`.
+delivered`. This automatically applies the chosen invoicing policy rule to all newly created
+products. Existing products must have their invoicing policy updated on their product forms.
 
 .. image:: invoicing_policy/invoicing-policy-setting.png
-   :align: center
    :alt: Choosing an invoicing policy on Odoo Sales.
 
 .. important::
@@ -30,16 +30,15 @@ delivered`.
    the :guilabel:`Automatic Invoice` feature, which automatically generates invoices when an online
    payment is confirmed.
 
-Invoicing policy on product form
-================================
+Invoicing policy on product forms
+=================================
 
 On any product page, via the :menuselection:`Sales app --> Products --> Products dashboard`, locate
 the :guilabel:`Invoicing Policy` option located under the :guilabel:`General Information` tab. It
 can be changed manually using the drop-down menu.
 
 .. image:: invoicing_policy/invoicing-policy-general-info-tab.png
-   :align: center
-   :alt: How to change your invoicing policy on a product form on Odoo Sales.
+   :alt: How to change invoicing policy on a product form on Odoo Sales.
 
 Impact on sales flow
 ====================
@@ -62,8 +61,8 @@ The following is a breakdown of how invoicing policy rules impact the aforementi
    quantities invoicing policy, please make sure that a quantity has been delivered.`
 
    .. image:: invoicing_policy/invoicing-policy-error-message.png
-      :align: center
-      :alt: If Delivered Quantities invoicing policy is chosen, ensure a quantity has been delivered.
+      :alt: If Delivered Quantities invoicing policy is chosen, ensure a quantity has been
+      delivered.
 
 .. note::
    Once a quotation is confirmed, and the status changes from :guilabel:`Quotation sent` to
@@ -71,8 +70,7 @@ The following is a breakdown of how invoicing policy rules impact the aforementi
    from the sales order. This is true for both invoicing policy rule options.
 
    .. image:: invoicing_policy/invoicing-policy-order-lines.png
-      :align: center
-      :alt: How to see your delivered and invoiced quantities on Odoo Sales.
+      :alt: How to see delivered and invoiced quantities on Odoo Sales.
 
    Odoo automatically adds the quantities to the invoice, both :guilabel:`Delivered` and
    :guilabel:`Invoiced`, even if it's a partial delivery, when the quotation is confirmed.
