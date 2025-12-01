@@ -15,7 +15,7 @@ with their customers by text, send documents, and provide support.
    For more information on migrating from Odoo Community version to Odoo Enterprise version see this
    documentation: :doc:`/administration/on_premise/community_to_enterprise`.
 
-With the **Odoo WhatsApp** app, a company can connect a WhatsApp Business
+With Odoo's **WhatsApp** app, a company can connect a WhatsApp Business
 Account (WABA) to an Odoo database, which allows for the following:
 
 - Receive and reply to WhatsApp messages directly from an Odoo database
@@ -43,12 +43,12 @@ an :abbr:`API (Application Programming Interface)` connection.
 The WhatsApp connector supports two flows: company-initiated, and
 customer-initiated. A company can initiate a discussion by sending a template to
 one or more people. Once the template is sent, the recipient can answer in order
-to trigger a discussion between the sender and the receiver (a *Discuss* chat
+to trigger a discussion between the sender and the receiver (a **Discuss** chat
 window pops up if the customer answers within 15 days).
 
-If the discussion is initiated by the client (e.g. by sending to the company's
+If the discussion is initiated by the client (e.g. by sending a message to the company's
 public WhatsApp number), Odoo opens a group chat with all operators responsible
-for this WhatsApp channel.
+for the WhatsApp channel.
 
 .. tip::
    It is recommended to set up multiple WhatsApp accounts for different departments. For example,
@@ -58,21 +58,21 @@ WhatsApp configuration in a Meta
 ================================
 
 A WhatsApp integration with Odoo uses a standard :abbr:`API (Application
-Programming Interface)` connection, and is configured on Meta in the following
+Programming Interface)` connection, and is configured in Meta in the following
 steps:
 
-#. Create a Meta business account
-#. Create a Meta developer account
-#. Setup an *app* and WhatsApp *product* on Meta's developer console
+#. Create a Meta business account.
+#. Create a Meta developer account.
+#. Setup an *app* and WhatsApp *product* on Meta's developer console.
 #. Test the API connection.
 
-Once connected, messages are then sent and received through Odoo's *Discuss*
+Once connected, messages are then sent and received through Odoo's **Discuss**
 application using the WhatsApp :abbr:`API (Application Programming Interface)`.
 
 Meta business account setup
 ---------------------------
 
-To create a Business account with Meta, navigate to `Facebook Business Manager
+To create a business account with Meta, navigate to `Facebook Business Manager
 <https://business.facebook.com/overview>`_. Begin by clicking :guilabel:`Create
 account` and then enter the business name, the administrator's name, and a work
 email address. Click :guilabel:`Next`, and confirm the email address in the
@@ -139,7 +139,7 @@ Then, click on the first option listed under the :guilabel:`Select an app type`
 label, titled :guilabel:`Business`. This selection allows for the creation and
 management of the WhatsApp :abbr:`API (Application Programming Interface)`.
 
-Now, click :guilabel:`Next` to configure the app, as desired. When the app
+Click :guilabel:`Next` to configure the app as desired. When the app
 *type* has been configured, the administrator moves on to the app *details*
 section.
 
@@ -153,8 +153,8 @@ enter `Odoo` in the field under the :guilabel:`Add an app name` label.
    The app name can be changed at a later time in the settings, if necessary.
 
 .. warning::
-   Trademarks and branded elements may not be used in this text section. These include the Meta
-   group of companies. Do not include the word `WhatsApp` or the system flags this in error.
+   Trademarks and branded elements may **not** be used in this text section. These include the Meta
+   group of companies. Do **not** include the word `WhatsApp` or the system flags this in error.
 
 Next, enter the developer email address in the field under the :guilabel:`App
 contact email` label.
@@ -198,7 +198,9 @@ the :guilabel:`Meta App Dashboard`.
 
 Once the WhatsApp product is added to the app, Meta provides a WhatsApp test
 phone number. This test phone number can send unlimited messages to a maximum of
-five recipients. Under :guilabel:`Send and receive messages`, select the
+five recipients.
+
+Under :guilabel:`Send and receive messages`, select the
 :guilabel:`To` field and choose :guilabel:`Manage phone number list`. Add up to
 five valid WhatsApp number as recipients, then enter the confirmation codes sent
 to those phone numbers in WhatsApp to verify. See the `WhatsApp Cloud API guide
@@ -209,7 +211,7 @@ Start using the WhatsApp API
 ----------------------------
 
 After finishing the previous WhatsApp product wizard, and clicking
-:guilabel:`Continue`, the browser should have directed to the WhatsApp
+:guilabel:`Continue`, the browser should have redirected to the WhatsApp
 :guilabel:`Quickstart` page; this :guilabel:`Quickstart` page is where to begin
 configuring the WhatsApp API by adding a phone number and then sending an
 initial test message.
@@ -244,7 +246,7 @@ the section on the page labeled :guilabel:`Send and receive messages` and click
 the drop-down menu next to :guilabel:`To`, under :guilabel:`Step 1 Select phone
 numbers`.
 
-Now, select the only option available: :guilabel:`Manage phone number list`.
+Next, select the only option available: :guilabel:`Manage phone number list`.
 Follow the steps and add up to five numbers to send the free test messages to.
 After entering the appropriate country code and phone number, click on
 :guilabel:`Next`.
@@ -275,9 +277,9 @@ WhatsApp configuration in Odoo
 
 The next steps configured in this section are all within the Odoo database. A
 few different values for a token, phone number, and account IDs all need to be
-configured in Odoo; these values are necessary in order to create a
+configured in Odoo; these values are necessary to create a
 :guilabel:`Callback URL` and :guilabel:`Webhook Verify Token`, which are then
-used to configure the webhooks (in order to receive messages back into the
+used to configure the webhooks, which are used to receive messages back into the
 database).
 
 In Odoo, navigate to :menuselection:`WhatsApp app --> Configuration --> WhatsApp
@@ -320,13 +322,13 @@ then paste that copied value into the :guilabel:`App Secret` field on the Odoo
 :guilabel:`WhatsApp Business Account` configuration dashboard.
 
 To complete the setup of the WhatsApp business account in Odoo, click
-:guilabel:`Test Connection`. A successful message in green populates in the
+:guilabel:`Test Connection`. A successful message in green populates the
 upper-right corner of the dashboard if the configuration is set correctly.
 
-Configuring webhooks
+Configure webhooks
 --------------------
 
-To configure the webhooks for WhatsApp in Odoo, navigate to
+To configure the webhooks for the Odoo **WhatsApp** app, navigate to
 `<https://developers.facebook.com/apps>`_ and select the app that Odoo is being
 configured in. Next under the :guilabel:`WhatsApp` menu heading on the left side
 of the screen, click on the :guilabel:`API Setup` menu item. Finally go to the
@@ -334,7 +336,7 @@ section marked :guilabel:`Step 3: Configure webhooks to receive messages` and
 click on :guilabel:`Configure webhooks`.
 
 .. tip::
-   Another way to configure *Webhooks* is to navigate to `<https://developers.facebook.com/apps>`_
+   Another way to configure *webhooks* is to navigate to `<https://developers.facebook.com/apps>`_
    and select the app that Odoo is being configured in. Then select :guilabel:`Webhooks` in the left
    hand menu.
 
@@ -367,8 +369,8 @@ Webhook fields
 ~~~~~~~~~~~~~~
 
 Now input individual webhook fields into Meta's developer console, under the
-:guilabel:`Webhook fields` section. Click :guilabel:`Manage` and when the pop-up
-window appears, check the boxes in the :guilabel:`Subscribe` column for the
+:guilabel:`Webhook fields` section. Click :guilabel:`Manage` and a pop-up
+window loads. Check the boxes in the :guilabel:`Subscribe` column for the
 following *field names*:
 
 - account_update
@@ -383,7 +385,6 @@ The finished :guilabel:`Webhooks` configuration appears like this in the Meta
 developer console:
 
 .. image:: whatsapp/webhooks-done.png
-   :align: center
    :alt: WhatsApp webhooks set in the Meta developer console.
 
 .. important::
@@ -394,10 +395,10 @@ developer console:
    `Meta's WhatsApp documentation on setting webhooks
    <https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks>`_.
 
-Add phone number
+Add a phone number
 ~~~~~~~~~~~~~~~~
 
-To configure the phone number to use for WhatsApp in Odoo, navigate back to the
+To configure the phone number to use for **WhatsApp** in Odoo, navigate back to the
 Meta developer console (`<https://developers.facebook.com/apps>`_) and again
 select the app that Odoo is being configured in. Under the :guilabel:`WhatsApp`
 menu heading on the left side of the screen, click on the :guilabel:`API Setup`
@@ -435,7 +436,7 @@ the respective field. Here, enter the phone number to configure in WhatsApp.
 
 Next, choose a verification method for the phone number. Select either
 :guilabel:`Text message` or :guilabel:`Phone call`, and then click
-:guilabel:`Next` proceed.
+:guilabel:`Next` to proceed.
 
 The phone number entered receives either a text or a phone call by WhatsApp with
 a code, depending on the verification method chosen. Enter that verification
@@ -443,7 +444,7 @@ code into the :guilabel:`Verification code` field and click :guilabel:`Next` to
 finish.
 
 .. warning::
-   If a payment method has not been added, this is necessary to proceed. `Visit Meta's
+   A payment method **must** be added to proceed. `Visit Meta's
    documentation on how to add a payment method in Meta's Business Manager
    <https://www.facebook.com/business/help/915454841921082?id=180505742745347>`_. This is part of
    Meta's fraud detection system, in order to ensure that the account/company are real a payment
@@ -468,7 +469,7 @@ created to replace the :guilabel:`Temporary token`.
 
 Begin by navigating to `<https://business.facebook.com/>`_ and then go to
 :menuselection:`Business settings --> User --> System Users`. Select an existing
-system user or create a new system user by clicking on :guilabel:`Add`.
+system user or create a new system user by clicking :guilabel:`Add`.
 
 Assets now must be added to the system user and then a permanent token can be
 generated.
@@ -485,7 +486,7 @@ and a pop-up window appears asking which app this token should be generated for.
 Select the :guilabel:`App` that this token is for. Then determine the expiration
 date of either :guilabel:`60 days` or :guilabel:`Never`.
 
-Finally, when Meta asks which permissions should the system user allow, add all
+Finally, Meta asks which permissions the system user allows.  Add all
 of the following permissions:
 
 - WhatsApp_business_messaging
@@ -507,7 +508,7 @@ and click on the app that is being configured. In the top menu, toggle the
 :guilabel:`App Mode` field from :guilabel:`Development` to :guilabel:`Live`.
 
 .. important::
-   If the app status is not set to *live*, then the database is only able to contact the test
+   If the app status is **not** set to *live*, then the database is only able to contact the test
    numbers specified in the developer console.
 
 .. warning::
@@ -535,16 +536,14 @@ choose the right message for the right audience. This increases the quality of
 the message and the overall engagement rate with the customer.
 
 WhatsApp templates can be created on both the Odoo and Meta consoles. The
-following process overviews the process for creating templates in Odoo and then
-afterward in Meta.
 
 .. important::
-   WhatsApp has an approval process that must be completed before the template can be used.
+   WhatsApp has an approval process that **must*** be completed *before* the template can be used.
    :ref:`productivity/whatsapp/approval`.
 
 .. _WhatsApp/templates:
 
-Creating templates in Odoo
+Create templates in Odoo
 --------------------------
 
 To access and create WhatsApp templates, begin by navigating to the
@@ -597,12 +596,11 @@ To search available fields, type in the front-end name in the
 for the model (:guilabel:`Applies to`) that the template is created for.
 
 .. note::
-   In order to find specific fields, multiple levels may need to be navigated in the search results
+   To find specific fields, multiple levels may need to be navigated in the search results
    box. Use the :guilabel:`> (right chevron)` and :guilabel:`⬅️ (left arrow)` icons to navigate
    between the menu levels.
 
 .. image:: whatsapp/phone-field.png
-   :align: center
    :alt: Searching for the phone field in the search bar.
 
 Change the :guilabel:`Category` to fit either a :guilabel:`Marketing`,
@@ -633,12 +631,12 @@ Navigate to the :guilabel:`Body` tab to configure the main message of the
 template.
 
 When all the necessary changes are made to the template, click on the
-:guilabel:`Submit for approval` button in the upper-left corner. This causes the
-status of the template to change to :guilabel:`Pending`.
+:guilabel:`Submit for approval` button in the upper-left corner, and the
+status of the template changes to :guilabel:`Pending`.
 
-The status remains in :guilabel:`Pending` until a decision has been made by
+The status remains :guilabel:`Pending` until a decision has been made by
 Meta, whereby a confirmation email is sent indicating that the template has been
-approved (or rejected). The templates then needs to be synced from the Odoo
+approved or rejected. Next, sync the templates from the Odoo
 database.
 
 See this section for more information on :ref:`syncing templates
@@ -667,7 +665,7 @@ Type`), depending on the :guilabel:`Type` of button.
    navigating to `<https://business.facebook.com/wa/manage/home>`_. Then go to
    :menuselection:`Account tools --> Message templates`.
 
-Using placeholders and variables
+Placeholders and variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Dynamic variables reference certain fields within the Odoo database to produce
@@ -682,7 +680,6 @@ within a model.
    email from the :guilabel:`Customer` field on the :guilabel:`Sales Order` model.
 
 .. image:: whatsapp/message.png
-   :align: center
    :alt: WhatsApp message with dynamic variables highlighted.
 
 Dynamic variables can be added in to the :guilabel:`Body` by adding
@@ -703,7 +700,7 @@ and increase incrementally as more placeholders are added to the text.
 .. seealso::
    :ref:`productivity/whatsapp/templates`.
 
-These placeholders must be configured on the :guilabel:`Variables` tab of the
+These placeholders **must** be configured on the :guilabel:`Variables` tab of the
 template before submitting for approval from Meta. To edit the dynamic variables
 on a template, first change the :guilabel:`Type` to :guilabel:`Field of Model`.
 This allows Odoo to reference a field within a model to produce unique data in
@@ -796,7 +793,6 @@ templates that are approved so that they can be utilized with various apps in
 the database.
 
 .. image:: whatsapp/sync-template.png
-   :align: center
    :alt: Syncing Meta WhatsApp templates to the Odoo database, with the 'Sync Templates'
          highlighted.
 
@@ -829,7 +825,7 @@ Enter the :guilabel:`Name` of the template and then select the
 :guilabel:`Language` for the template.
 
 .. note::
-   Multiple languages can be selected by typing the language name(s) and selecting the other
+   Multiple languages can be selected by typing the language names and selecting the other
    languages as needed.
 
 .. image:: whatsapp/template-config.png
@@ -844,16 +840,15 @@ Here the :guilabel:`Header`, :guilabel:`Body`, :guilabel:`Footer` and
 what the template looks like in production.
 
 .. image:: whatsapp/edit-template.png
-   :align: center
    :alt: Edit the template using a header, body, footer and buttons.
 
 When all the necessary changes are made to the template, click on the
 :guilabel:`Submit` button in the upper-right corner. A confirmation window
-appears to confirm the language— click :guilabel:`Confirm` to approve and then
+appears to confirm the language. Click :guilabel:`Confirm` to approve and then
 another window appears stating that the template has been submitted to Meta for
 review and approval.
 
-The :guilabel:`Status` of the template remains in :guilabel:`In review` until a
+The :guilabel:`Status` of the template remains :guilabel:`In review` until a
 decision has been made by Meta. Once an email confirmation is received approving
 the template, the templates need to be synced from within the Odoo database.
 
@@ -874,25 +869,24 @@ Notification settings can be adjusted by navigating to :menuselection:`WhatsApp
 app --> Configuration --> WhatsApp Business Accounts`. From there, select the
 account and scroll down to the :menuselection:`Control` section where
 notifications are handled. Under the :guilabel:`Notify users` heading, type in
-the field which user(s) should be notified for this particular WhatsApp channel.
+the field which users should be notified for this particular WhatsApp channel.
 
 .. note::
    Once a conversation is initiated between a user and a customer, notifications to all the users
    specified in the WhatsApp business account configuration won't occur. Only notifications to the
-   user(s) in the conversation occur. Should the user not respond within 15 days, the
+   users in the conversation occur. Should the user not respond within 15 days, the
    customer's reply after the 15 days populates once again to all the users specified in the
    WhatsApp configuration.
 
-Adding users to chat
+Adding users to a chat
 ====================
 
 Users can be added to a WhatsApp chat by expanding the WhatsApp pop-up window.
-WhatsApp conversations are located in the *Discuss* app. Click on the
+WhatsApp conversations are located in the **Discuss** app. Click on the
 :guilabel:`👤+ (add user)` icon next to it, and a window appears to invite users
 to the conversation.
 
 .. image:: whatsapp/add-users.png
-   :align: center
    :alt: Adding users to a WhatsApp conversation, with the add user icon highlighted.
 
 WhatsApp API FAQ
@@ -926,7 +920,6 @@ template name on Odoo and sync the templates once again by following the steps
 here: :ref:`productivity/whatsapp/sync`.
 
 .. image:: whatsapp/validation-error-2.png
-   :align: center
    :alt: User error populated in Odoo when a duplicate template exists.
 
 Token errors
@@ -935,12 +928,11 @@ Token errors
 User error
 ~~~~~~~~~~
 
-Should the temporary token not be replaced with a permanent token a user error
+Should the temporary token not be replaced with a permanent token, a user error
 populates in Odoo when testing the connection after sending fails. To correct
 this issues see :ref:`productivity/whatsapp/token`.
 
 .. image:: whatsapp/user-error.png
-   :align: center
    :alt: User error populated in Odoo when token expires.
 
 System user error 100
