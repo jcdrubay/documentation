@@ -5,7 +5,7 @@ WhatsApp
 **WhatsApp** is an instant messaging and voice-over-IP app that allows users to
 send messages, make calls, and share content. Businesses can use `WhatsApp
 Business <https://developers.facebook.com/products/whatsapp/>`_ to communicate
-with their customers by text, send documents and provide support.
+with their customers by text, send documents, and provide support.
 
 .. warning::
    WhatsApp is an Odoo Enterprise-only application that does not work in Odoo Community edition. To
